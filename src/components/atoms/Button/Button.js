@@ -6,8 +6,8 @@ const Button = styled.button`
     align-items: center;
     color: black;
     text-decoration: none;
+    background-color: ${({ activecolor, theme }) => theme[activecolor]};
     padding: 0;
-    background-color: ${({ activeColor, theme }) => theme[activeColor]};
     width: 220px;
     height: 47px;
     border: none;
