@@ -23,7 +23,7 @@ const Articles = ({ articles }) => (
 Articles.propTypes = {
     articles: PropTypes.arrayOf(
         PropTypes.shape({
-            id: PropTypes.number.isRequired,
+            id: PropTypes.PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
             cardType: PropTypes.string,
             title: PropTypes.string.isRequired,
             content: PropTypes.string.isRequired,

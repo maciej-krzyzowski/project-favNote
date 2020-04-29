@@ -77,6 +77,11 @@ const initialState = {
 
 const rootReducer = (state = initialState, action) => {
     switch (action.type) {
+        case 'ADD_ITEM':
+            return {
+                ...state,
+                [action.payload.itemType]: [...state[action.payload.itemType], action.payload.item],
+            };
         case 'REMOVE_ITEM':
             return {
                 ...state,

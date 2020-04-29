@@ -23,7 +23,7 @@ const Twitters = ({ twitters }) => (
 Twitters.propTypes = {
     twitters: PropTypes.arrayOf(
         PropTypes.shape({
-            id: PropTypes.number.isRequired,
+            id: PropTypes.PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
             cardType: PropTypes.string,
             title: PropTypes.string,
             content: PropTypes.string.isRequired,
